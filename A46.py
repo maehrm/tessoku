@@ -26,8 +26,27 @@ def get_distance(cur, nxt):
     return (nxt_x - cur_x) ** 2 + (nxt_y - cur_y) ** 2
 
 
+def two_opt(tour):  # 2-opt
+    improved = True
+    while improved:
+        improved = False
+        for i in range(1, N - 1):
+            for j in range(i + 1, N):
+                a, b = tour[i - 1], tour[i]
+                c, d = tour[j], tour[j + 1]
+                old_dist = get_distance(a, b) + get_distance(c, d)
+                new_dist = get_distance(a, c) + get_distance(b, d)
+                if new_dist < old_dist:
+                    tour[i : j + 1] = tour[i: j + 1][::-1]
+                    improved = True
+        if improved:
+            break
+    return tour
+
+
 N = int(input())
 XY = [list(map(int, input().split())) for _ in range(N)]
 ans = solv(N)
+ans = two_opt(ans)
 for a in ans:
     print(a + 1)
