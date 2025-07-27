@@ -1,0 +1,6 @@
+N, M, B = map(int,input().split())
+A = list(map(int,input().split()))
+C = list(map(int,input().split()))
+sumA = sum(A)
+sumC = sum(C)
+print(sumA * M + sumC * N + B * (N * M))
