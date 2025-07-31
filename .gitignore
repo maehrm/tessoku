@@ -1,0 +1,19 @@
+# Emacs backup files
+*~
+
+# Emacs auto-save files
+#.#*
+
+# Temporary files
+*.bak
+*.tmp
+*.swp
+*.swo
+*.swn
+*.swo
+
+# macOS specific files (optional, but often useful)
+.DS_Store
+
+# Windows specific files (optional, but often useful)
+Thumbs.db
