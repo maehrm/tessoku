@@ -38,9 +38,13 @@ def bfs(graph, source, sink, parent):
     return False
 
 
-N, M = map(int, input().split())
-G = [[0] * N for _ in range(N)]
-for _ in range(M):
-    a, b, c = map(int, input().split())
-    G[a - 1][b - 1] = c
-print(max_flow(G, 0, N - 1))
+N = int(input())
+C = [input() for _ in range(N)]
+G = [[0] * (2 * N + 2) for _ in range(2 * N + 2)]
+for i in range(N):
+    G[0][i + 1] = 1             # Source -> 生徒ノード
+    G[i + 1 + N][2 * N + 1] = 1 # 席ノード -> Sink
+    for j in range(N):
+        if C[i][j] == "#":
+            G[i + 1][j + 1 + N] = 1
+print(max_flow(G, 0, 2 * N + 1))
