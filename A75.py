@@ -1,3 +1,4 @@
+# A75 - Examination https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bw
 N = int(input())
 TD = [list(map(int, input().split())) for _ in range(N)]
 TD.sort(key=lambda x: x[1])
