@@ -29,3 +29,6 @@ def fibonacci(n):
 MOD = 10**9 + 7
 N = int(input())
 print(fibonacci(N))
+
+# 参考
+# 行列を使ってフィボナッチ数列 - Mae向きなブログ https://maehrm.hatenablog.com/entry/2015/05/05/084607
