@@ -1,3 +1,4 @@
+# B57 - Calculator https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ed
 def digit_sum(n):               # 格桁の合計を求める。
     ret = 0
     while n > 0:
