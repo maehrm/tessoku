@@ -1,4 +1,4 @@
-# 
+# C03 - Stock Queries https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_fa
 D = int(input())
 stock_price = [0] * D
 stock_price[0] = int(input())
