@@ -17,3 +17,7 @@
 
 # Windows specific files (optional, but often useful)
 Thumbs.db
+
+# A50用、サンプルファイル
+example_01.txt
+example_01_out.txt
